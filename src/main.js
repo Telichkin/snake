@@ -1,6 +1,6 @@
 import Game from './game';
-import Control from './control/browser';
-import Render from './render/react';
+import Control from './control/console';
+import Render from './render/console';
 
 Game({ 
   size: 20,
