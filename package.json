@@ -1,0 +1,45 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "Simple Snake Game",
+  "main": "src/main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "ava": "^1.0.0-beta.6",
+    "npm": "^6.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browserify": "^16.2.2",
+    "lolex": "^2.7.0"
+  },
+  "scripts": {
+    "start": "node ./build/main.js",
+    "build": "babel src --plugins transform-react-jsx -d build && browserify ./build/main.js -o ./dist/bundle.js",
+    "test": "ava"
+  },
+  "author": "Telichkin",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": {
+      "testOptions": {
+        "babelrc": false
+      }
+    }
+  }
+}
